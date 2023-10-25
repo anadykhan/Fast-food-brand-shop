@@ -12,7 +12,7 @@ const AddBrand = () => {
 
     console.log(newBrand)
 
-    fetch('http://localhost:8080/addedbrand', {
+    fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedbrand', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

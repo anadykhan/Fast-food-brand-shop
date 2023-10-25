@@ -14,7 +14,7 @@ const Product = ({ data }) => {
         const newCart = { image, name, brandID, brandName, type, price, des, rating }
 
         if (user) {
-            fetch('http://localhost:8080/addedcart', {
+            fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedcart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

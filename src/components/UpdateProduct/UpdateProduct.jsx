@@ -29,7 +29,7 @@ const UpdateProduct = () => {
 
         console.log(newProduct)
 
-        fetch(`http://localhost:8080/updateproduct/${_id}`, {
+        fetch(`https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/updateproduct/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -49,11 +49,11 @@ const UpdateProduct = () => {
                         timer: 1500
                     })
                 ) // Assuming the response is JSON
-                
+
             })
             .then((data) => {
                 console.log(data); // Process the response data here
-                
+
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -65,41 +65,41 @@ const UpdateProduct = () => {
             });
     }
 
-  return (
-      <div>
-          <div className="flex flex-col gap-4 p-20">
-              <div className="text-3xl">
-                  UPDATE THE REQUIRED INFORMATION
-              </div>
-              <form onSubmit={updateProduct} className="flex flex-col gap-4 w-[30rem]">
-                  <div className="form-control">
-                      <input type="text" name="productImage" defaultValue={image} placeholder="Product Image" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="productName" defaultValue={name} placeholder="Product Name" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="brandID" defaultValue={brandID} placeholder="Brand ID" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="brandName" defaultValue={brandName} placeholder="Brand Name" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="productType" defaultValue={type} placeholder="Product Type" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="productPrice" defaultValue={price} placeholder="Product Price" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="productDes" defaultValue={des} placeholder="Product Description" className="input input-bordered w-full" />
-                  </div>
-                  <div className="form-control">
-                      <input type="text" name="productRating" defaultValue={rating} placeholder="Product Rating" className="input input-bordered w-full" />
-                  </div>
-                  <input type="submit" value="Update Product" className="btn btn-primary" />
-              </form>
-          </div>
-      </div>
-  )
+    return (
+        <div>
+            <div className="flex flex-col gap-4 p-20">
+                <div className="text-3xl">
+                    UPDATE THE REQUIRED INFORMATION
+                </div>
+                <form onSubmit={updateProduct} className="flex flex-col gap-4 w-[30rem]">
+                    <div className="form-control">
+                        <input type="text" name="productImage" defaultValue={image} placeholder="Product Image" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="productName" defaultValue={name} placeholder="Product Name" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="brandID" defaultValue={brandID} placeholder="Brand ID" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="brandName" defaultValue={brandName} placeholder="Brand Name" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="productType" defaultValue={type} placeholder="Product Type" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="productPrice" defaultValue={price} placeholder="Product Price" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="productDes" defaultValue={des} placeholder="Product Description" className="input input-bordered w-full" />
+                    </div>
+                    <div className="form-control">
+                        <input type="text" name="productRating" defaultValue={rating} placeholder="Product Rating" className="input input-bordered w-full" />
+                    </div>
+                    <input type="submit" value="Update Product" className="btn btn-primary" />
+                </form>
+            </div>
+        </div>
+    )
 }
 export default UpdateProduct

@@ -8,7 +8,7 @@ const Brands = () => {
     const [brands, setBrands] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:8080/addedbrandlist`, {
+        fetch(`https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedbrandlist`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -16,12 +16,12 @@ const Brands = () => {
 
         })
             .then((response) => response.json())
-            .then((messages) => { 
+            .then((messages) => {
                 setBrands(messages)
-             });
+            });
     }, [])
 
-    
+
 
     return (
         <div className="my-32 flex flex-col gap-16 items-center">
@@ -34,7 +34,7 @@ const Brands = () => {
                 }
             </div>
             <div>
-                <button className="btn btn-primary bg-[#f2a22a] text-black border-none"><AiOutlineEye/>VIEW ALL BRANDS</button>
+                <button className="btn btn-primary bg-[#f2a22a] text-black border-none"><AiOutlineEye />VIEW ALL BRANDS</button>
             </div>
         </div>
     )

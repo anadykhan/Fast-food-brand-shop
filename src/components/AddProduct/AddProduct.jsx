@@ -17,7 +17,7 @@ const AddProduct = () => {
 
     console.log(newProduct)
 
-    fetch('http://localhost:8080/addedproduct', {
+    fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedproduct', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

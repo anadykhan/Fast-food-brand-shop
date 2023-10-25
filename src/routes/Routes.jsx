@@ -19,7 +19,7 @@ const Routes = createBrowserRouter([
         element: <Root></Root>,
         children: [
             {
-                path:'/',
+                path: '/',
                 element: <Home></Home>
             },
             {
@@ -31,27 +31,27 @@ const Routes = createBrowserRouter([
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
-                path:'/login',
+                path: '/login',
                 element: <Login></Login>
             },
             {
                 path: '/cart',
-                loader: () => fetch('http://localhost:8080/addedcartlist'),
+                loader: () => fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedcartlist'),
                 element: <PrivateRoute><Cart></Cart></PrivateRoute>
             },
             {
                 path: '/products/:id',
-                loader: () => fetch('http://localhost:8080/addedproductlist'),
+                loader: () => fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedproductlist'),
                 element: <Products></Products>
             },
             {
                 path: '/updateproduct/:id',
-                loader: () => fetch('http://localhost:8080/addedproductlist'),
+                loader: () => fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedproductlist'),
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>
             },
             {
                 path: '/productdetails/:id',
-                loader: () => fetch('http://localhost:8080/addedproductlist'),
+                loader: () => fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedproductlist'),
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
             },
             {
@@ -60,7 +60,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/branches',
-                loader: () => fetch('http://localhost:8080/addedlocationlist'),
+                loader: () => fetch('https://brand-shop-server-j07dqpm9r-anadykhan.vercel.app/addedlocationlist'),
                 element: <Branches></Branches>
             },
             {
