@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'roboto_slabbold';
+    src: url('/RobotoSlab-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('/RobotoSlab-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_slablight';
+    src: url('/RobotoSlab-Light-webfont.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slabthin';
+    src: url('/RobotoSlab-Thin-webfont.woff') format('woff');
+    font-weight: thin;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'roboto_slabregular';
+}
