@@ -8,10 +8,13 @@ const Products = () => {
 
     const filteredProducts = loadedData.filter(product => brandID == Number(product.brandID))
 
+    console.log(filteredProducts)
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center p-2">
         {
-              filteredProducts.map(data => <Product key={data._id} data={data}></Product>)
+        filteredProducts.legth ? filteredProducts.map(data => <Product key={data._id} data={data}></Product>) : <div>No Products here</div>
+              
         }
     </div>
   )
