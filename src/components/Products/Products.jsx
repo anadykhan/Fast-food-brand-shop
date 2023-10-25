@@ -14,7 +14,7 @@ const Products = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center p-2">
         {
-        filteredProducts.legth ? filteredProducts.map(data => <Product key={data._id} data={data}></Product>) : <NoProduct></NoProduct>
+        filteredProducts.length ? filteredProducts.map(data => <Product key={data._id} data={data}></Product>) : <NoProduct></NoProduct>
               
         }
     </div>
