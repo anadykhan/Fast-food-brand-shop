@@ -11,6 +11,7 @@ import ProductDetails from "../components/ProductDetails/ProductDetails"
 import Registration from "../components/Registration/Registration"
 import Branches from "../components/Branches/Branches"
 import PrivateRoute from "./PrivateRoute"
+import NoPage from "../components/NoPage/NoPage"
 
 const Routes = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ const Routes = createBrowserRouter([
                 path: '/branches',
                 loader: () => fetch('http://localhost:8080/addedlocationlist'),
                 element: <Branches></Branches>
+            },
+            {
+                path: '*',
+                element: <NoPage></NoPage>
             }
         ]
     }

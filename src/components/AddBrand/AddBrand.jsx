@@ -35,8 +35,8 @@ const AddBrand = () => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={handleBrand}>
+      <div className="p-5">
+        <form onSubmit={handleBrand} className="flex flex-col gap-5">
           <div className="form-control">
             <input type="text" name="brandId" placeholder="Brand ID" className="input input-bordered w-full max-w-xs" />
           </div>
@@ -46,7 +46,7 @@ const AddBrand = () => {
           <div className="form-control">
             <input type="text" name="brandPhoto" placeholder="Brand Photo URL" className="input input-bordered w-full max-w-xs" />
           </div>
-          <input type="submit" value="Add Brand" className="btn btn-primary" />
+          <input type="submit" value="Add Brand" className="btn btn-primary bg-[#ab1d2c] border-none" />
         </form>
       </div>
     </div>
